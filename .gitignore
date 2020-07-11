@@ -1,0 +1,9 @@
+.idea
+.project
+.buildpath
+.settings/
+*.iml
+.vs
+obj/
+*.dll
+*.pdb
