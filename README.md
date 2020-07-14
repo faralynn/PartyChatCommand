@@ -2,8 +2,7 @@
 
 ## COMMANDS:
 
-/script SendAddonMessage("CMD", "Follow", "PARTY");
-/script SendAddonMessage("CMD", "Stay", "PARTY");
+(soon!)
 /script SendAddonMessage("CMD", "Attack", "PARTY");
 
 /script SendAddonMessage("CMD", "stay", "PARTY");
