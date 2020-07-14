@@ -89,7 +89,7 @@ public class Main : IPlugin
             string message = args[1];
             string sender = args[3];
 
-            Main.LuaPrint("msg: " + prefix + message + sender);
+            //Main.LuaPrint("msg: " + prefix + message + sender);
 
             foreach (var c in PartyChatCommandSettings.CurrentSetting.Commands)
             {
@@ -163,13 +163,13 @@ public class PartyChatCommandSettings : Settings
                         },
                         new Command
                         {
-                            CommandChat = "managed",
+                            CommandChat = "stay",
                             CommandAction = "robotManager.Products.Products.InPause = true; wManager.Wow.Helpers.Fight.StopFight(); wManager.Wow.Helpers.MovementManager.StopMove();",
                             Type = CommandType.CSharp
                         },
                         new Command
                         {
-                            CommandChat = "mischief",
+                            CommandChat = "follow",
                             CommandAction = "robotManager.Products.Products.InPause = false;",
                             Type = CommandType.CSharp
                         },

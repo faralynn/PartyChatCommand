@@ -35,12 +35,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="robotManager">
-      <HintPath>..\..\..\trainer\wrobot-1.0-dispatch-healbot\Bin\robotManager.dll</HintPath>
+      <HintPath>..\..\..\bin\wrobot-1.0-dispatch-healbot\Bin\robotManager.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
     <Reference Include="wManager">
-      <HintPath>..\..\..\trainer\wrobot-1.0-dispatch-healbot\Bin\wManager.dll</HintPath>
+      <HintPath>..\..\..\bin\wrobot-1.0-dispatch-healbot\Bin\wManager.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
