@@ -89,7 +89,17 @@ public class Main : IPlugin
             string message = args[1];
             string sender = args[3];
 
-            //Main.LuaPrint("msg: " + prefix + message + sender);
+            if (prefix != ObjectManager.Me.Name)
+            {
+                return;
+            }
+            else
+            {
+                Main.LuaPrint(sender + " told me to " + message + " ..MyName: " + ObjectManager.Me.Name);
+            }
+
+
+            //Main.LuaPrint("msg: " + prefix + message + sender + "  MyName:" + ObjectManager.Me.Name);
 
             foreach (var c in PartyChatCommandSettings.CurrentSetting.Commands)
             {
