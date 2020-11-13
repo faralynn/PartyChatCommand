@@ -152,15 +152,15 @@ public class PartyChatCommandSettings : Settings
     {
         try
         {
-            if (File.Exists(AdviserFilePathAndName("PartyChatCommand", ObjectManager.Me.Name + "." + Usefuls.RealmName)))
-            {
-                CurrentSetting =
-                    Load<PartyChatCommandSettings>(AdviserFilePathAndName("PartyChatCommand",
-                                                                 ObjectManager.Me.Name + "." + Usefuls.RealmName));
-                return true;
-            }
-            else
-            {
+            //if (File.Exists(AdviserFilePathAndName("PartyChatCommand", ObjectManager.Me.Name + "." + Usefuls.RealmName)))
+            //{
+            //    CurrentSetting =
+            //        Load<PartyChatCommandSettings>(AdviserFilePathAndName("PartyChatCommand",
+            //                                                     ObjectManager.Me.Name + "." + Usefuls.RealmName));
+            //    return true;
+            //}
+            //else
+            //{
                 CurrentSetting = new PartyChatCommandSettings
                 {
                     Commands = new[]
@@ -171,16 +171,28 @@ public class PartyChatCommandSettings : Settings
                             CommandAction = "6948",
                             Type = CommandType.UseItem
                         },
+                        //new Command
+                        //{
+                        //    CommandChat = "stay",
+                        //    CommandAction = "robotManager.Products.Products.InPause = true; wManager.Wow.Helpers.Fight.StopFight(); wManager.Wow.Helpers.MovementManager.StopMove();",
+                        //    Type = CommandType.CSharp
+                        //},
+                        //new Command
+                        //{
+                        //    CommandChat = "follow",
+                        //    CommandAction = "robotManager.Products.Products.InPause = false;",
+                        //    Type = CommandType.CSharp
+                        //},
                         new Command
                         {
                             CommandChat = "stay",
-                            CommandAction = "robotManager.Products.Products.InPause = true; wManager.Wow.Helpers.Fight.StopFight(); wManager.Wow.Helpers.MovementManager.StopMove();",
+                            CommandAction = "robotManager.Products.Products.ProductStop(); robotManager.Products.Products.LoadProducts(\"WRotation\"); robotManager.Products.Products.ProductStart();",
                             Type = CommandType.CSharp
                         },
                         new Command
                         {
                             CommandChat = "follow",
-                            CommandAction = "robotManager.Products.Products.InPause = false;",
+                            CommandAction = "robotManager.Products.Products.ProductStop(); robotManager.Products.Products.LoadProducts(\"Party\"); robotManager.Products.Products.ProductStart();",
                             Type = CommandType.CSharp
                         },
                         new Command
@@ -191,7 +203,7 @@ public class PartyChatCommandSettings : Settings
                         },
                     }
                 };
-            }
+            //}
         }
         catch (Exception e)
         {
